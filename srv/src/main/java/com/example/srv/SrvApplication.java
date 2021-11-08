@@ -17,6 +17,13 @@ public class SrvApplication {
         return "Hello " + name;
     }
 
+    @RequestMapping("/demo1")
+    @ResponseBody
+    public String demo1(String name) {
+        System.out.println("Hello " + name);
+        return "Hello " + name;
+    }
+
     public static void main(String[] args) {
         SpringApplication.run(SrvApplication.class, args);
     }
