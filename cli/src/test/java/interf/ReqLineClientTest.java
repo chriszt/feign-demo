@@ -14,4 +14,11 @@ public class ReqLineClientTest {
         System.out.println(ret);
     }
 
+    @Test
+    public void testReqLine2() {
+        ReqLineClient client = FeignClientFactory.create(ReqLineClient.class);
+        String ret = client.reqLine2("zhangsan");
+        System.out.println(ret);
+    }
+
 }
