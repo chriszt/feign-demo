@@ -24,6 +24,24 @@ public class SrvApplication {
         return "Hello " + name;
     }
 
+    @RequestMapping("/demo2")
+    @ResponseBody
+    public String demo2(String[] name) {
+        if (name != null) {
+            for (String s : name) {
+                System.out.println(s);
+            }
+        }
+        return "demo2 ok";
+    }
+
+    @RequestMapping("/demo3")
+    @ResponseBody
+    public String demo3(String name) {
+        System.out.println("Hello " + name);
+        return "Hello " + name;
+    }
+
     public static void main(String[] args) {
         SpringApplication.run(SrvApplication.class, args);
     }
